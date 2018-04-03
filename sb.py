@@ -134,7 +134,7 @@ while True:
                                 cctv['sidermem'][msg.to] = ""
                                 cctv['cyduk'][msg.to]=True
 							elif text.lower() == 'Mod List':
-									client.sendText(msg.to, "[V0] Signed Only <br> [V1] God Mode [V2] Auto-parry / Crit / Weak Enemy [V3] God Mode + Ghost Enemy [V3f] God Mode + Freeze Enemy")
+									client.sendText(msg.to, "[V0] Signed Only <br> [V1] God Mode [V2] Auto-parry / Crit / Weak Enemy [V3] God Mode + Ghost Enemy [V3f] God Mode + Freeze Enemy"):
                             elif text.lower() == 'offread':
                                 if msg.to in cctv['point']:
                                     cctv['cyduk'][msg.to]=False
