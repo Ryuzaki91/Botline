@@ -133,14 +133,18 @@ while True:
                                 cctv['point'][msg.to] = msg.id
                                 cctv['sidermem'][msg.to] = ""
                                 cctv['cyduk'][msg.to]=True
-							elif text.lower() == 'Mod List':
-									client.sendText(msg.to, "[V0] Signed Only <br> [V1] God Mode [V2] Auto-parry / Crit / Weak Enemy [V3] God Mode + Ghost Enemy [V3f] God Mode + Freeze Enemy"):
                             elif text.lower() == 'offread':
                                 if msg.to in cctv['point']:
                                     cctv['cyduk'][msg.to]=False
                                     client.sendText(msg.to, cctv['sidermem'][msg.to])
                                 else:
                                     client.sendText(msg.to, "Heh belom di Set")
+									elif text.lower() == 'offread':
+                            if msg.to in cctv['ModList']:
+                                    cctv['cyduk'][msg.to]=False
+                                    client.sendText(msg.to, cctv['sidermem'][msg.to])
+                            else:
+                                    client.sendText(msg.to, "[V0] Signed Only <br> [V1] God Mode [V2] Auto-parry / Crit / Weak Enemy [V3] God Mode + Ghost Enemy [V3f] God Mode + Freeze Enemy")
                 except Exception as e:
                     client.log("[SEND_MESSAGE] ERROR : " + str(e))
 
